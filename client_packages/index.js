@@ -1,0 +1,1 @@
+require('authenticate.js');

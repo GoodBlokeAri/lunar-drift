@@ -1,0 +1,9 @@
+*.exe
+conf.json
+bt.dat
+maps/*
+*.dll
+PLUTONIUM OLD/*
+node_modules/*
+packages/PLUTONIUM/node_modules/
+client_packages/dlcpacks/

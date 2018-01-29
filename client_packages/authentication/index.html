@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Box Concept</title>
+
+
+    <link rel='stylesheet prefetch' href='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+    <div class='login'>
+        <div class='login_title'>
+            <span>Log in to Plutonium War</span>
+        </div>
+
+        <div class='login_fields'>
+            <div class='login_fields__user'>
+                <div class='icon'>
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/user_icon_copy.png'>
+                </div>
+
+                <input placeholder='Username' type='text' id="loginName">
+                <div class='validation'>
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                </div>
+
+                </input>
+            </div>
+
+            <div class='login_fields__password'>
+                <div class='icon'>
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/lock_icon_copy.png'>
+                </div>
+
+                <input placeholder='Password' type='password' id="loginPass">
+                <div class='validation'>
+                    <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/tick.png'>
+                </div>
+
+            </div>
+
+            <div class='login_fields__submit'>
+                <input type='submit' onclick="this.disabled = true; sendData()" value='Log In'>
+                <!--
+                <div class='forgot'>
+                    <a href='#'>Forgotten password?</a>
+                </div>
+                -->
+            </div>
+
+        </div>
+
+        <div class='success'>
+            <h2 id='authh2'>Authentication Success</h2>
+            <p id='authp'>Welcome back</p>
+        </div>
+
+        <div class='disclaimer'>
+            <p>By logging in you agree that Jim sucks dick lmao!</p>
+        </div>
+
+    </div>
+
+    <div class='authent'>
+        <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/puff.svg'>
+        <p>Authenticating...</p>
+    </div>
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

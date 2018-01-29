@@ -1,0 +1,34 @@
+Plutonium War
+Plutonium Laravel Web panel:
+    Icons
+    f43cmdi-radioactive
+    f0a7mdi-biohazard
+
+
+    KDR, Stats, Money, Last sides
+    Gamemode Commits
+
+Load Team Vehicles from SQL
+
+Cronjob for 10 minute sql backups
+
+Game Serial Whitelist for testing phase
+
+server mysql table:
+    Server name
+    Free Premium period (weekend, date>date)
+    Mode (Main, Whitelist Beta)
+
+Progression (kills, score, captures) to unlock unique clothing from array
+
+Score progresses class level
+    Carbine Rifle > MK2 (weapon upgrades)
+    Attachments
+    Ammo Type (FMJ, Incendiary, Tracer, etc)
+    for better equipment and abilities (score restrict some classes, or have as powerups? Star Wars style)
+
+Classes: Infantry, Medic, Sniper, Pilot, Engineer, Spy, Heavy (heist armour)
+
+Show Classes on spawn with CEF: List on left, hovering over shows their starting gear (+ unlocks you have)
+
+settings.json > autologin keep account name and password is encrypted
