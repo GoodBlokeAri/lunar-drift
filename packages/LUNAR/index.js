@@ -67,7 +67,7 @@ registeredEvents.forEach(event => { mp.events.add(event); });
 
 // Cron jobs
 
-gm.cronjob.schedule('*/2 * * * *', function() // Save all user accounts
+gm.cronjob.schedule('* /10 * * * *', function() // Save all user accounts
 {
 	mp.players.forEach((player, id) =>
 	{

@@ -8,5 +8,10 @@ Lunar Drift
 Spawn at custom drift map
 command and UI to select other maps to TP to (with image preview)
 new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned)
+drift points = money
+drift points + hours on = reputation = better mask (just a visual representation of drift ability?)
+admin UI
+fastDL for dlcpacks
+swap to HTML chat colours
 
 settings.json > autologin keep account name and password is encrypted, also for settings like keybinds and units of measurement

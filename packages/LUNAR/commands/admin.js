@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /v /w /dv");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /v /w /dv /fix");
 });
 
 mp.events.addCommand('a', (player, text) =>
@@ -138,12 +138,6 @@ mp.events.addCommand('w', (player,  _, target, weapon) =>
 });
 
 mp.events.addCommand('dv', (player) =>
-{
-    player.outputChatBox("soon");
-});
-
-
-mp.events.addCommand('clearpoint', (player) =>
 {
     player.outputChatBox("soon");
 });

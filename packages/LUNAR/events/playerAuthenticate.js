@@ -33,12 +33,6 @@ mp.events.add('sendShitToServer', (player, user, pass) =>
     });
 });
 
-mp.events.add("sendTeamSelectionToServer", (player, team/*, teamClass*/) =>
-{
-    player.team = team;
-    player.call("authReply", ["teamselected"]);
-});
-
 mp.events.add("testSpawn", (player) =>
 {
     gm.utility.loadAccount(player);
