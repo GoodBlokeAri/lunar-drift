@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <style>
+      html, body {
+        font-family: 'Arial', sans-serif;
+        font-size: 0;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+        width: 100vw;
+      }
+
+      body {
+        position: relative;
+        background-image: url("C:/Users/Lucas/Pictures/poubelle/background.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      main {
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: -400px;
+        width: 100%;
+        transition: top 200ms linear 0s;
+      }
+
+      main.show {
+        top: 0;
+      }
+
+      #messages {
+        display: inline-block;
+        height: 200px;
+        padding: 5px 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      #messages_inner {
+        position: absolute;
+        bottom: 0;
+      }
+
+      #messages p {
+        margin: 2px 0;
+      }
+
+      #messages, #code {
+        font-size: 12px;
+        margin: 0;
+        width: 100%;
+      }
+
+      #messages .error {
+        color: red;
+      }
+
+      #messages .value {
+        color: green;
+      }
+
+      #messages .message {
+        color: white;
+      }
+
+      #code input {
+        background-color: rgba(0,0,0,0.3);
+        border: 0;
+        box-sizing: border-box;
+        color: white;
+        height: 30px;
+        padding: 10px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="messages">
+        <div id="messages_inner"></div>
+      </div>
+      <form id="code">
+        <input type="text" name="line" autocomplete="off" />
+      </form>
+    </main>
+    <script>
+      var isFocused = false;
+      var isActive = false;
+      var msgCount = 0;
+
+      function add(msg, type) {
+        let newP = document.createElement('p');
+        newP.innerHTML = `<p class='${type}'>${msg}</p>`;
+        var list = document.getElementById('messages_inner');
+        list.appendChild(newP);
+      }
+
+      function addError(msg) {
+        add(msg, "error");
+      }
+
+      function addValue(msg) {
+        add(msg, "value");
+      }
+
+      function addMessage(msg) {
+        add(msg, "message");
+      }
+
+      document.querySelector('#code input').addEventListener('focus', e => {
+        isFocused = true;
+      });
+
+      document.querySelector('#code input').addEventListener('blur', e => {
+        isFocused = false;
+      })
+
+      document.getElementById('code').addEventListener('submit', e => {
+        e.preventDefault();
+        let line = e.currentTarget.line;
+        addMessage(line.value);
+        mp.trigger('cefDebug', line.value);
+        line.value = "";
+      });
+
+      document.addEventListener('keypress', e => {
+        if (e.keyCode == 178 && !isFocused) {
+          isActive = !isActive;
+          mp.invoke("focus", isActive);
+          mp.trigger('disableChat', isActive);
+          document.querySelector("main").classList.toggle("show");
+        }
+      });
+    </script>
+  </body>
+</html>

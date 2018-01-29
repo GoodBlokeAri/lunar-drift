@@ -13,5 +13,15 @@ drift points + hours on = reputation = better mask (just a visual representation
 admin UI
 fastDL for dlcpacks
 swap to HTML chat colours
+drift UI using Vehicle::setHandling (Traction Curve Lateral, Max Steer Angle, Handbrake Force, RWD/AWD/FWD, suspension raise, suspension force)
+Achievements
+    Complete a long ass Drift
+    Visit all the drift maps available
+    
+
+Premium ideas?
+    Custom car model or livery?
+    particle trails (tron line etc)
+    Discord Role
 
 settings.json > autologin keep account name and password is encrypted, also for settings like keybinds and units of measurement
