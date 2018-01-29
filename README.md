@@ -1,0 +1,1 @@
+Plutonium is a TDM style war gamemode consisting of two teams where both compete for domination of San Andreas by capturing points to yield their team with buffs, additional vehicles, power-ups and more.
