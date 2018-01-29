@@ -1,34 +1,12 @@
-Plutonium War
-Plutonium Laravel Web panel:
-    Icons
-    f43cmdi-radioactive
-    f0a7mdi-biohazard
+Lunar Drift
 
+    Lunar Web Panel:
+        See current user information (play time, most used car, admin/premium levels, last login, register date)
+        Submit Mod suggestions
+        See Gamemode Commits
 
-    KDR, Stats, Money, Last sides
-    Gamemode Commits
+Spawn at custom drift map
+command and UI to select other maps to TP to (with image preview)
+new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned)
 
-Load Team Vehicles from SQL
-
-Cronjob for 10 minute sql backups
-
-Game Serial Whitelist for testing phase
-
-server mysql table:
-    Server name
-    Free Premium period (weekend, date>date)
-    Mode (Main, Whitelist Beta)
-
-Progression (kills, score, captures) to unlock unique clothing from array
-
-Score progresses class level
-    Carbine Rifle > MK2 (weapon upgrades)
-    Attachments
-    Ammo Type (FMJ, Incendiary, Tracer, etc)
-    for better equipment and abilities (score restrict some classes, or have as powerups? Star Wars style)
-
-Classes: Infantry, Medic, Sniper, Pilot, Engineer, Spy, Heavy (heist armour)
-
-Show Classes on spawn with CEF: List on left, hovering over shows their starting gear (+ unlocks you have)
-
-settings.json > autologin keep account name and password is encrypted
+settings.json > autologin keep account name and password is encrypted, also for settings like keybinds and units of measurement
