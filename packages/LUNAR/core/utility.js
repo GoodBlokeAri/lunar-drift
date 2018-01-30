@@ -2,8 +2,8 @@ module.exports =
 {
     saveAccount: function (player)
     {
-        gm.mysql.Handle.query("UPDATE `user` SET name = ?, ip = ?, serial = ?, admin = ?, premium = ?, score = ?, kills = ?, deaths = ?, last_login = CURRENT_TIMESTAMP WHERE id = ?",
-        [player.name, player.ip, player.serial, player.admin, player.premium, player.score, player.kills, player.deaths, player.sqlid]);
+        gm.mysql.Handle.query("UPDATE `user` SET name = ?, ip = ?, serial = ?, admin = ?, premium = ?, last_login = CURRENT_TIMESTAMP WHERE id = ?",
+        [player.name, player.ip, player.serial, player.admin, player.premium, player.sqlid]);
     },
 
     loadAccount: function (player)

@@ -1,10 +1,13 @@
 var mysql = require('mysql');
 
-module.exports = {
+module.exports =
+{
 	Handle: null,
 
-	Connect: function (callback) {
-		this.Handle = mysql.createConnection({
+	Connect: function (callback)
+	{
+		this.Handle = mysql.createConnection(
+		{
 			host: 'localhost',
 			user: 'root',
 			password: '',
@@ -12,15 +15,18 @@ module.exports = {
 			debug: false
 		});
 
-		this.Handle.connect(function (e) {
-			console.log("\x1b[36m[MYSQL]\x1b[37m Connction successful");
-			if (!e) {
+		this.Handle.connect(function (e)
+		{
+			if (!e)
+			{
+				console.log("\x1b[36m[MYSQL]\x1b[37m Connction successful");
 				callback();
 			}
 			else console.log("\x1b[36m[MYSQL]\x1b[37m DATABASE ERROR!" + e);
 		});
 
-		this.Handle.on('error', function (err) {
+		this.Handle.on('error', function (err)
+		{
 			console.log("\x1b[31m Warning: SQL ERROR " + err.code);
 		});
 	}

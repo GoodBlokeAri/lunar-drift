@@ -30,9 +30,9 @@ mp.game.ui.displayRadar(false);
 // -----------------------------------------------------------------------------
 
 
-mp.events.add('loginDataToClient', (user, pass) =>
+mp.events.add('loginDataToClient', (user, pass, state) =>
 {
-	mp.events.callRemote("sendShitToServer", user, pass)
+	mp.events.callRemote("sendShitToServer", user, pass, state)
 });
 
 mp.events.add('authReply', (status) =>
@@ -63,7 +63,7 @@ mp.events.add('authReply', (status) =>
 				localPlayer.freezePosition(false);
 
 				mp.events.callRemote("testSpawn");
-			}, 5000);
+			}, 1000);
 			break;
 		}
 		case "wrongpass" :
@@ -78,19 +78,6 @@ mp.events.add('authReply', (status) =>
 				mainUI = mp.browsers.new("package://authentication/index.html");
 			}, 10000);
 
-			break;
-		}
-		case "register" :
-		{
-			setTimeout(function()
-			{
-				for (var i = 0, len = mp.browsers.length; i < len; ++i)
-				{
-					mp.browsers.at(i)
-						.destroy();
-				}
-				mainUI = mp.browsers.new("package://authentication/index.html#register");
-			}, 10000);
 			break;
 		}
 	}
