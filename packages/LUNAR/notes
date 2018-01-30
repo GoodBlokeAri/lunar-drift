@@ -10,14 +10,16 @@ command and UI to select other maps to TP to (with image preview)
 new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned)
 drift points = money
 drift points + hours on = reputation = better mask (just a visual representation of drift ability?)
-admin UI
+admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpto pos, tpto waypoint, fix vehicle
+bind for admin ui
+bind for show cursor 
 fastDL for dlcpacks
 swap to HTML chat colours
 drift UI using Vehicle::setHandling (Traction Curve Lateral, Max Steer Angle, Handbrake Force, RWD/AWD/FWD, suspension raise, suspension force)
 Achievements
     Complete a long ass Drift
     Visit all the drift maps available
-    
+
 
 Premium ideas?
     Custom car model or livery?

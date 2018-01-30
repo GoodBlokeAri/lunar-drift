@@ -38,8 +38,8 @@ mp.events.add("testSpawn", (player) =>
     gm.utility.loadAccount(player);
 	player.logged = 1;
 
-    player.outputChatBox("Welcome to Lunar Drift: !{769fe0}" + player.name + "!{white}.");
-    player.outputChatBox("<SRV> To view a list of commands type /help!");
+    player.outputChatBox("Welcome to Lunar Drift: <span style='color:#e038ac'>" + player.name + "</span><span style='color:#ffffff'>.</span>");
+    player.outputChatBox("<span style='color:#cf0b0b'><SRV></span> <span style='color:#ffffff'>To view a list of commands type /help!</span>");
 
     player.spawn(new mp.Vector3(-1048.005, -2952.721, 13.96));
     player.model = mp.joaat('mp_m_freemode_01');
@@ -49,7 +49,7 @@ mp.events.add("testSpawn", (player) =>
         if (player.admin > 0)
         {
             console.log("<LOG> " + player.name + " has logged in as a level: " + player.admin + " administrator!");
-            player.outputChatBox("<SRV> Type /ah to view a list of administrator actions!");
+            player.outputChatBox("<span style='color:#cf0b0b'><SRV></span> <SRV></span> <span style='color:#ffffff'>Type /ah to view a list of administrator actions!</span>");
         }
     }, 3000);
 

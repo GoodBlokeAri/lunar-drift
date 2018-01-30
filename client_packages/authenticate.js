@@ -20,10 +20,13 @@ mp.game.gameplay.disableAutomaticRespawn(true);
 
 mp.gui.chat.show(false);
 mp.gui.chat.activate(false);
-mp.game.ui.setMinimapVisible(true); /* this is reversed */
-mp.game.ui.displayRadar(false);
+mp.gui.chat.safeMode = false;
+
 mp.gui.cursor.visible = true;
 mp.gui.chat.safeMode = true;
+
+mp.game.ui.setMinimapVisible(true); /* this is reversed */
+mp.game.ui.displayRadar(false);
 
 // -----------------------------------------------------------------------------
 
@@ -39,9 +42,6 @@ mp.events.add('authReply', (status) =>
 	{
 		case "success" :
 		{
-			mainUI.execute(`document.getElementById("authh2").innerHTML = "<h2>Authentication Success!</h2>"`);
-			mainUI.execute(`document.getElementById("authp").innerHTML = " <p>Welcome back, ${localPlayer.name}! You last authenticated on: $date</p>"`);
-
 			setTimeout(function()
 			{
 				for (var i = 0, len = mp.browsers.length; i < len; ++i)
@@ -69,9 +69,6 @@ mp.events.add('authReply', (status) =>
 		}
 		case "wrongpass" :
 		{
-			mainUI.execute(`document.getElementById("authh2").innerHTML = "<h2>Authentication Failed!</h2>"`);
-			mainUI.execute(`document.getElementById("authp").innerHTML = " <p>You have entered the wrong password!</p>"`);
-
 			setTimeout(function()
 			{
 				for (var i = 0, len = mp.browsers.length; i < len; ++i)
@@ -86,9 +83,6 @@ mp.events.add('authReply', (status) =>
 		}
 		case "register" :
 		{
-			mainUI.execute(`document.getElementById("authh2").innerHTML = "<h2>Authentication Failed!</h2>"`);
-			mainUI.execute(`document.getElementById("authp").innerHTML = " <p>You do not have an account, you will be redirected to create one!</p>"`);
-
 			setTimeout(function()
 			{
 				for (var i = 0, len = mp.browsers.length; i < len; ++i)
