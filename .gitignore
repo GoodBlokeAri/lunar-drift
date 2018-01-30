@@ -7,3 +7,7 @@ PLUTONIUM OLD/*
 node_modules/*
 packages/PLUTONIUM/node_modules/
 client_packages/dlcpacks/
+
+server - Shortcut\.lnk
+
+client_packages/\.listcache

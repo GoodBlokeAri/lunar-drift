@@ -1,1 +1,1 @@
-Plutonium is a TDM style war gamemode consisting of two teams where both compete for domination of San Andreas by capturing points to yield their team with buffs, additional vehicles, power-ups and more.
+unar Drift is a gamemode project for RageMP aimed at: repliacting the FiveM/FiveReborn drift community on RageMP whilst also offering a better all around experience with a feature packed gamemode to make it as enjoyable for everyone as possible.
