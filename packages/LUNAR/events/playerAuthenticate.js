@@ -44,16 +44,14 @@ mp.events.add('sendShitToServer', (player, user, pass, state) =>
                 {
                     gm.bcrypt.genSalt(10, function(err, res)
                     {
-                        console.log("SALT: " + res + " (ERROR(?): " + err + ")");
-                        gm.bcrypt.hash(pass, res, function(error, hash)
+                        hash = gm.bcrypt.hashSync(pass, res);
+
+                        gm.mysql.Handle.query("INSERT INTO `user` SET name = ?, password = ?, ip = ?, serial = ?, admin = ?, premium = ?, created_at = CURRENT_TIMESTAMP, last_login = CURRENT_TIMESTAMP",
+                        [user, hash, player.ip, player.serial, 0, 0], function(e, result)
                         {
-                            console.log("PASS: " + hash + " ERROR(?): " + error);
-                            gm.mysql.Handle.query("INSERT INTO `user` SET name = ?, password = ?, ip = ?, serial = ?, admin = ?, premium = ?, created_at = CURRENT_TIMESTAMP, last_login = CURRENT_TIMESTAMP",
-                            [user, hash, player.ip, player.serial, 0, 0], function(e, result)
-                            {
-                                player.name = user;
-                                player.call("authReply", ["success"]);
-                            });
+                            player.name = user;
+                            player.call("authReply", ["success"]);
+                            console.log("<SRV> " + player.name + "has just registered for the first time.");
                         });
                     });
                 }
