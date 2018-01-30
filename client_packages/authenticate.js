@@ -23,7 +23,6 @@ mp.gui.chat.activate(false);
 mp.gui.chat.safeMode = false;
 
 mp.gui.cursor.visible = true;
-mp.gui.chat.safeMode = true;
 
 mp.game.ui.setMinimapVisible(true); /* this is reversed */
 mp.game.ui.displayRadar(false);
