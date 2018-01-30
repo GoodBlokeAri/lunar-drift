@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /v /w /dv /fix");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /v /w /dv /fix /gotopos");
 });
 
 mp.events.addCommand('a', (player, text) =>
@@ -98,6 +98,14 @@ mp.events.addCommand('tpto', (player, target) =>
     let targetPos = targetPlayer.position;
     targetPos.x += 5.0;
 
+    player.position = targetPos;
+});
+
+mp.events.addCommand('gotopos', (player, position) =>
+{
+    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
+
+    let targetPos = parseFloat(position);
     player.position = targetPos;
 });
 
