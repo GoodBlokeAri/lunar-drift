@@ -25,13 +25,10 @@ CREATE TABLE IF NOT EXISTS `user` (
   `serial` varchar(256) DEFAULT NULL,
   `admin` int(1) NOT NULL DEFAULT '0',
   `premium` int(1) NOT NULL DEFAULT '0',
-  `score` int(15) DEFAULT NULL,
-  `kills` int(5) DEFAULT NULL,
-  `deaths` int(5) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `last_login` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
