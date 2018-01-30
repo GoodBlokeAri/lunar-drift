@@ -12,7 +12,7 @@ mp.events.addCommand('a', (player, text) =>
 
     mp.players.forEach((_player, id) =>
     {
-        switch(_player.admin)
+        switch(player.admin)
         {
             case 3:
             {
@@ -98,7 +98,7 @@ mp.events.addCommand('tpto', (player, target) =>
     let targetPos = targetPlayer.position;
     targetPos.x += 5.0;
 
-    player.pos = targetPos;
+    player.position = targetPos;
 });
 
 mp.events.addCommand('v', (player,  _, veh_name) =>
