@@ -14,11 +14,6 @@ mp.events.addCommand('a', (player, text) =>
     {
         switch(player.admin)
         {
-            case 3:
-            {
-                _player.outputChatBox(">> (Owner) " + player.name + ": " + text);
-                break;
-            }
             case 2:
             {
                 _player.outputChatBox(">> (Developer) " + player.name + ": " + text);
