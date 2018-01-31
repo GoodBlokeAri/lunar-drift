@@ -10,9 +10,12 @@ command and UI to select other maps to TP to (with image preview)
 new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned)
 drift points = money
 drift points + hours on = reputation = better mask (just a visual representation of drift ability?)
-admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpto pos, tpto waypoint, fix vehicle
+admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpto pos, tpto waypoint, fix vehicle, make admin, make premium,
 bind for admin ui
 bind for show cursor
+login > set IP
+mysql logs
+login/register UI promots "wrong password", "that account exists" etc in the UI
 fastDL for dlcpacks
 swap to HTML chat colours
 drift UI using Vehicle::setHandling (Traction Curve Lateral, Max Steer Angle, Handbrake Force, RWD/AWD/FWD, suspension raise, suspension force)
@@ -27,5 +30,7 @@ Premium ideas?
     Custom car model or livery?
     particle trails (tron line etc)
     Discord Role
+    in-game chat emoji
+    pick player blip for map
 
 settings.json > autologin keep account name and password is encrypted, also for settings like keybinds and units of measurement
