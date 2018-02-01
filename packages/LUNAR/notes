@@ -7,7 +7,7 @@ Lunar Drift
 
 Spawn at custom drift map
 command and UI to select other maps to TP to (with image preview)
-new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned)
+new vehicle spawn UI (select DLC vehicles, colour, toggle whether to warp in when spawned, wash car (splash water particle))
 drift points = money
 drift points + hours on = reputation = better mask (just a visual representation of drift ability?)
 admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpto pos, tpto waypoint, fix vehicle, make admin, make premium,
