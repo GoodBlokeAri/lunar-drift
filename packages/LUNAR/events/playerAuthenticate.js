@@ -51,7 +51,7 @@ mp.events.add('sendShitToServer', (player, user, pass, state) =>
                         {
                             player.name = user;
                             player.call("authReply", ["success"]);
-                            console.log("<SRV> " + player.name + "has just registered for the first time.");
+                            console.log("<SRV> " + player.name + " has just registered for the first time.");
                         });
                     });
                 }
