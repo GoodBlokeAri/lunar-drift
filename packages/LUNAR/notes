@@ -13,11 +13,11 @@ drift points + hours on = reputation = better mask (just a visual representation
 admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpto pos, tpto waypoint, fix vehicle, make admin, make premium,
 bind for admin ui
 bind for show cursor
-login > set IP
-mysql logs
-login/register UI promots "wrong password", "that account exists" etc in the UI
+restructure UIs to use better, common, bootstrap file tree
+***login > set IP
+***mysql logs
+***login/register UI promots "wrong password", "that account exists" etc in the UI
 fastDL for dlcpacks
-swap to HTML chat colours
 drift UI using Vehicle::setHandling (Traction Curve Lateral, Max Steer Angle, Handbrake Force, RWD/AWD/FWD, suspension raise, suspension force)
 Achievements
     Complete a long ass Drift
@@ -25,6 +25,15 @@ Achievements
 
 generate and save player.colour for chat etc
 
+SQL Logs to save
+    id (log entry)
+    date
+    userid
+    username
+    ip
+    serial
+    logtype (0 user, 1 chat, 2 admin, 3 server)
+    log
 
 Premium ideas?
     Custom car model or livery?
