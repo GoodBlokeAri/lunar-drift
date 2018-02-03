@@ -16,16 +16,17 @@ mp.events.addCommand('a', (player, text) =>
         {
             case 2:
             {
-                _player.outputChatBox(">> (Developer) " + player.name + ": " + text);
+                _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#0297d7'>(Developer)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
                 break;
             }
             default:
             {
-                _player.outputChatBox(">> (Admin) " + player.name + ": " + text);
+                _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#c60505'>(Admin)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
                 break;
             }
         }
     });
+    console.log("<ACHAT LOG> " + "(ALVL:" + player.admin + ")" + " (ID: " + player.id + ") " + player.name + ": " + text);
 });
 
 mp.events.addCommand('kick', (player, target, reason) =>
