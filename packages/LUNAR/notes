@@ -14,7 +14,6 @@ admin UI - kick/ban, tphere/tpto, spawn vehicle, spawn weapon, spawn object, tpt
 bind for admin ui
 bind for show cursor
 restructure UIs to use better, common, bootstrap file tree
-***login > set IP
 ***mysql logs
 ***login/register UI promots "wrong password", "that account exists" etc in the UI
 fastDL for dlcpacks
