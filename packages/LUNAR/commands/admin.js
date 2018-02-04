@@ -12,17 +12,20 @@ mp.events.addCommand('a', (player, text) =>
 
     mp.players.forEach((_player, id) =>
     {
-        switch(player.admin)
+        if(_player.admin)
         {
-            case 2:
+            switch(player.admin)
             {
-                _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#0297d7'>(Developer)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
-                break;
-            }
-            default:
-            {
-                _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#c60505'>(Admin)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
-                break;
+                case 2:
+                {
+                    _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#0297d7'>(Developer)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
+                    break;
+                }
+                case 1:
+                {
+                    _player.outputChatBox("<span style='color:#9bd6bf'>>></span> <span style='color:#c60505'>(Admin)</span> <span style='color:#e038ac'>" + player.name + ":</span> <span style='color:#9bd6bf'>" + text);
+                    break;
+                }
             }
         }
     });
