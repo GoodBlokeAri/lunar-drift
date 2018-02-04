@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /v /w /dv /fix /gotopos");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /w /dv /fix /gotopos");
 });
 
 mp.events.addCommand('a', (player, text) =>
@@ -103,24 +103,6 @@ mp.events.addCommand('gotopos', (player, position) =>
 
     let targetPos = parseFloat(position);
     player.position = targetPos;
-});
-
-mp.events.addCommand('v', (player,  _, veh_name) =>
-{
-    // push to an array, so it can be deleted
-    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
-
-    let pos = player.position;
-    pos.x += 2.0;
-
-    let veh = mp.vehicles.new(mp.joaat(veh_name), pos);
-
-    //veh.setColorRGB(143, 255, 0 , 143, 255, 0);
-    veh.dimension = player.dimension;
-    veh.numberPlate = "PUSSY";
-
-    player.putIntoVehicle(veh, -1);
-    veh.data.isAdmin = 1;
 });
 
 mp.events.addCommand('w', (player,  _, target, weapon) =>
