@@ -12,4 +12,3 @@ mp.events.add('render', () =>
         });
     }
 });
-;
