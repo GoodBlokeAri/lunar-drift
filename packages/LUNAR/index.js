@@ -67,7 +67,7 @@ registeredEvents.forEach(event => { mp.events.add(event); });
 
 // Cron jobs
 
-gm.cronjob.schedule('* /10 * * * *', function() // Cleanup unoccupied vehicles every 10 minutes
+gm.cronjob.schedule('* 10 * * * *', function() // Cleanup unoccupied vehicles every 10 minutes
 {
 	mp.vehicles.forEach((vehicle) =>
 	{
@@ -79,7 +79,7 @@ gm.cronjob.schedule('* /10 * * * *', function() // Cleanup unoccupied vehicles e
 	});
 });
 
-gm.cronjob.schedule('* /10 * * * *', function() // Save all user accounts
+gm.cronjob.schedule('* 10 * * * *', function() // Save all user accounts
 {
 	mp.players.forEach((player, id) =>
 	{
