@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /w /dv /fix /gotopos");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /w /dv /fix /gotopos /time");
 });
 
 mp.events.addCommand('a', (player, text) =>
@@ -56,6 +56,16 @@ mp.events.addCommand('kick', (player, target, reason) =>
 mp.events.addCommand('ban', (player, target) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
+});
+
+mp.events.addCommand('time', (player, time) =>
+{
+    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
+    if(time < 0 || > 24) return player.outputChatBox("<SERVER> The time range is 0-24!");
+    if(!time) return player.outputChatBox("<SERVER> The correct usage is: /time [0-24]!");
+
+
+    mp.world.time.hour = time;
 });
 
 mp.events.addCommand('fix', (player) =>
