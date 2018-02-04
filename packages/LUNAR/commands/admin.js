@@ -61,7 +61,7 @@ mp.events.addCommand('ban', (player, target) =>
 mp.events.addCommand('time', (player, time) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
-    if(time < 0 || > 24) return player.outputChatBox("<SERVER> The time range is 0-24!");
+    if(time < 0 || time > 24) return player.outputChatBox("<SERVER> The time range is 0-24!");
     if(!time) return player.outputChatBox("<SERVER> The correct usage is: /time [0-24]!");
 
 
