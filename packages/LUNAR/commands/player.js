@@ -18,8 +18,6 @@ mp.events.addCommand('pos', (player) =>
 mp.events.addCommand('v', (player,  _, veh_name) =>
 {
     // push to an array, so it can be deleted
-    if(!veh_name) return player.outputChatBox("<SERVER> The usage is: /v [model]");
-
     let pos = player.position;
     pos.x += 2.0;
 
