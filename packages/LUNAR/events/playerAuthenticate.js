@@ -69,7 +69,7 @@ mp.events.add("testSpawn", (player) =>
     player.outputChatBox("Welcome to Lunar Drift: <span style='color:#e038ac'>" + player.name + "</span><span style='color:#ffffff'>.</span>");
     player.outputChatBox("<span style='color:#cf0b0b'>" + "<SRV>" + "</span> <span style='color:#ffffff'>To view a list of commands type /help!</span>");
 
-    player.spawn(new mp.Vector3(-1809.073, 823.45, 140));
+    player.spawn(new mp.Vector3(-2206.32, -448.172, 329.38));
     player.model = mp.joaat('mp_m_freemode_01');
 
     setTimeout(function() // allows asynchronous sql loading to take place

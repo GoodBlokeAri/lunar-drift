@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /tpto /w /dv /fix /gotopos /time");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /w /dv /time");
 });
 
 mp.events.addCommand('a', (player, text) =>
@@ -69,12 +69,6 @@ mp.events.addCommand('time', (player, time) =>
     mp.world.time.hour = parseInt(time);
 });
 
-mp.events.addCommand('fix', (player) =>
-{
-    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
-    player.vehicle.repair();
-});
-
 mp.events.addCommand('spectate', (player, target) =>
 {
     player.outputChatBox("soon");
@@ -92,28 +86,6 @@ mp.events.addCommand('tphere', (player, target) =>
     playerPos.x += 5.0;
 
     targetPlayer.position = playerPos;
-});
-
-mp.events.addCommand('tpto', (player, target) =>
-{
-    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
-
-    if (typeof target == 'undefined') return player.outputChatBox("The correct usage is: /tpto [target]");
-
-    const targetPlayer = gm.utility.findPlayerByIdOrNickname(target);
-
-    let targetPos = targetPlayer.position;
-    targetPos.x += 5.0;
-
-    player.position = targetPos;
-});
-
-mp.events.addCommand('gotopos', (player, position) =>
-{
-    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
-
-    let targetPos = parseFloat(position);
-    player.position = targetPos;
 });
 
 mp.events.addCommand('w', (player,  _, target, weapon) =>
