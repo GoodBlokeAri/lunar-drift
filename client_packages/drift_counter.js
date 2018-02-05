@@ -13,7 +13,7 @@ mp.events.add('render', () =>
         });
 
         //Rotation
-        let rotation = mp.players.local.vehicle.getRotation();
+        let rotation = mp.players.local.vehicle.getRotation(2);
 
         mp.game.graphics.drawText(' Rotation x: ' + rotation.x, [0.7, 0.005],
         {
