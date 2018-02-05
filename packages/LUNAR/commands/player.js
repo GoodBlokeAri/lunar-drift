@@ -1,6 +1,6 @@
 mp.events.addCommand('help', (player, text) =>
 {
-    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v");
+    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn");
 });
 
 mp.events.addCommand('ping', (player) =>
@@ -27,4 +27,9 @@ mp.events.addCommand('v', (player,  _, veh_name) =>
     veh.dimension = player.dimension;
     veh.numberPlate = "PUSSY";
     veh.data.playerSpawned = 1;
+});
+
+mp.events.addCommand('gotospawn', (player) =>
+{
+    player.position = new mp.Vector3(-1809.073, 823.45, 140);
 });
