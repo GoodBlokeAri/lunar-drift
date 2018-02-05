@@ -74,8 +74,8 @@ gm.cronjob.schedule('5 * * * *', function() // Cleanup unoccupied vehicles every
 		if(!vehicle.getOccupants)
 		{
 			vehicle.destroy(vehicle);
-			console.log("<LOG> All empty vehicles were destroyed! ");
 		}
+		console.log("<LOG> All empty vehicles were destroyed! ");
 	});
 });
 
