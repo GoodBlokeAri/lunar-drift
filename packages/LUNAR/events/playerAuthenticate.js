@@ -66,7 +66,7 @@ mp.events.add("testSpawn", (player) =>
     gm.utility.loadAccount(player);
 	player.logged = 1;
 
-    player.outputChatBox("Welcome to Lunar Drift: <span style='color:#e038ac'>" + player.name + "</span><span style='color:#ffffff'>.</span>");
+    player.outputChatBox("Welcome to Lunar Drift: <span style='color:#e038ac'>" + player.name + "</span><span style='color:#ffffff'>. Make sure you join our Discord: https://discord.gg/v5HQcqw!</span>");
     player.outputChatBox("<span style='color:#cf0b0b'>" + "<SRV>" + "</span> <span style='color:#ffffff'>To view a list of commands type /help!</span>");
 
     player.spawn(new mp.Vector3(-2206.32, -448.172, 329.38));
