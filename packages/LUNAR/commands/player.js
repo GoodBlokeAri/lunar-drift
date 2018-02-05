@@ -1,6 +1,6 @@
 mp.events.addCommand('help', (player, text) =>
 {
-    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn");
+    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn /fix /gotopos /tpto");
 });
 
 mp.events.addCommand('ping', (player) =>
@@ -32,4 +32,27 @@ mp.events.addCommand('v', (player,  _, veh_name) =>
 mp.events.addCommand('gotospawn', (player) =>
 {
     player.position = new mp.Vector3(-2206.32, -448.172, 329.38);
+});
+
+mp.events.addCommand('fix', (player) =>
+{
+    player.vehicle.repair();
+});
+
+mp.events.addCommand('tpto', (player, target) =>
+{
+    if (typeof target == 'undefined') return player.outputChatBox("The correct usage is: /tpto [target]");
+
+    const targetPlayer = gm.utility.findPlayerByIdOrNickname(target);
+
+    let targetPos = targetPlayer.position;
+    targetPos.x += 5.0;
+
+    player.position = targetPos;
+});
+
+mp.events.addCommand('gotopos', (player, position) =>
+{
+    let targetPos = parseFloat(position);
+    player.position = targetPos;
 });
