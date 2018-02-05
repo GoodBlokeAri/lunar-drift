@@ -28,3 +28,16 @@ mp.events.addCommand('v', (player,  _, veh_name) =>
     veh.numberPlate = "PUSSY";
     veh.data.playerSpawned = 1;
 });
+
+mp.events.addCommand('color', (player, color1, color2) =>
+{
+    if (!color1 || !color2) return player.outputChatBox("The correct usage is: /color [primary] [secondary]");
+
+    let veh = player.vehicle;
+    let primary = parseInt(color1);
+    let secondary = parseInt(color2);
+
+    veh.setColor(primary, secondary);
+
+    player.outputChatBox("<SRV> Color changed!");
+});
