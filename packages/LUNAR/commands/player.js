@@ -1,6 +1,6 @@
 mp.events.addCommand('help', (player, text) =>
 {
-    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn /fix /gotopos /tpto");
+    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn /fix /gotopos /tpto /mods");
 });
 
 mp.events.addCommand('ping', (player) =>
@@ -55,4 +55,15 @@ mp.events.addCommand('gotopos', (player, position) =>
 {
     let targetPos = parseFloat(position);
     player.position = targetPos;
+});
+
+mp.events.addCommand('mods', (player) =>
+{
+     /*
+         var filePath   = "/dlcpacks/";
+         var fileGroup  = filePath.split("/");
+         var listGroup = fileGroup.pop();
+         // listGroup should output all folders??
+     */
+    player.outputChatBox("LIST OF CURRENT MODS: blze30 / cresta / evo6 / rx7cwest / s15mak / silvia");
 });
