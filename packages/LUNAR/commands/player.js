@@ -31,5 +31,5 @@ mp.events.addCommand('v', (player,  _, veh_name) =>
 
 mp.events.addCommand('gotospawn', (player) =>
 {
-    player.position = new mp.Vector3(-1809.073, 823.45, 140);
+    player.position = new mp.Vector3(-2206.32, -448.172, 329.38);
 });
