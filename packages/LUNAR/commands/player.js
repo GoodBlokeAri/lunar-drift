@@ -65,7 +65,7 @@ mp.events.addCommand('mods', (player) =>
          var listGroup = fileGroup.pop();
          // listGroup should output all folders??
      */
-    player.outputChatBox("LIST OF CURRENT MODS: blze30 / cresta / evo6 / rx7cwest / s15mak / silvia");
+    player.outputChatBox("LIST OF CURRENT MODS: blze30 / cresta / bmwe36 / rx7cwest / s15mak / silvia");
 });
 
 mp.events.addCommand('colour', (player, colour1, colour2) =>
