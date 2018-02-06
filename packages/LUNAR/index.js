@@ -71,7 +71,7 @@ gm.cronjob.schedule('5 * * * *', function() // Cleanup unoccupied vehicles every
 {
 	mp.vehicles.forEach((vehicle) =>
 	{
-		if(vehicle.getOccupants().length == 0)
+		if(vehicle.getOccupant().length == 0)
 		{
 			vehicle.destroy();
 		}

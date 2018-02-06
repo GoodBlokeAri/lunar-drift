@@ -117,7 +117,7 @@ mp.events.addCommand('clean', (player) =>
 
     mp.vehicles.forEach((vehicle) =>
     {
-        if(vehicle.getOccupants().length == 0)
+        if(vehicle.getOccupant().length == 0)
         {
             vehicle.destroy();
         }
