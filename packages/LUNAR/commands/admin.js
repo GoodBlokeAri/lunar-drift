@@ -110,3 +110,17 @@ mp.events.addCommand('dv', (player) =>
 {
     player.outputChatBox("soon");
 });
+
+mp.events.addCommand('clean', (player) =>
+{
+    if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
+
+    mp.vehicles.forEach((vehicle) =>
+    {
+        if(vehicle.getOccupants().length == 0)
+        {
+            vehicle.destroy();
+        }
+    });
+    console.log("<LOG> All empty vehicles were destroyed! ");
+});

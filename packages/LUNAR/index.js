@@ -71,12 +71,12 @@ gm.cronjob.schedule('5 * * * *', function() // Cleanup unoccupied vehicles every
 {
 	mp.vehicles.forEach((vehicle) =>
 	{
-		if(!vehicle.getOccupants)
+		if(vehicle.getOccupants().length == 0)
 		{
-			vehicle.destroy(vehicle);
+			vehicle.destroy();
 		}
-		console.log("<LOG> All empty vehicles were destroyed! ");
 	});
+	console.log("<LOG> All empty vehicles were destroyed! ");
 });
 
 gm.cronjob.schedule('10 * * * *', function() // Save all user accounts
