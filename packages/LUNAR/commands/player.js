@@ -1,6 +1,6 @@
 mp.events.addCommand('help', (player, text) =>
 {
-    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn /fix /gotopos /tpto /mods");
+    player.outputChatBox(">> (PLAYER HELP) /ping /pos /v /gotospawn /fix /gotopos /tpto /mods /colour");
 });
 
 mp.events.addCommand('ping', (player) =>

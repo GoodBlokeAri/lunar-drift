@@ -2,7 +2,7 @@ mp.events.addCommand('ah', (player, text) =>
 {
     if(player.admin < 1) return player.outputChatBox("<SERVER> You don't have access to this command!");
 
-    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /w /dv /time");
+    player.outputChatBox(">> (ADMIN HELP) /a /kick /ban /spectate /tphere /w /dv /time /clean");
 });
 
 mp.events.addCommand('a', (player, text) =>
