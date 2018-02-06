@@ -29,19 +29,6 @@ mp.events.addCommand('v', (player,  _, veh_name) =>
     veh.data.playerSpawned = 1;
 });
 
-mp.events.addCommand('color', (player, color1, color2) =>
-{
-    if (!color1 || !color2) return player.outputChatBox("The correct usage is: /color [primary] [secondary]");
-
-    let veh = player.vehicle;
-    let primary = parseInt(color1);
-    let secondary = parseInt(color2);
-
-    veh.setColor(primary, secondary);
-
-    player.outputChatBox("<SRV> Color changed!");
-});
-
 mp.events.addCommand('gotospawn', (player) =>
 {
     player.position = new mp.Vector3(-2206.32, -448.172, 329.38);
@@ -79,4 +66,17 @@ mp.events.addCommand('mods', (player) =>
          // listGroup should output all folders??
      */
     player.outputChatBox("LIST OF CURRENT MODS: blze30 / cresta / evo6 / rx7cwest / s15mak / silvia");
+});
+
+mp.events.addCommand('colour', (player, colour1, colour2) =>
+{
+    if (!colour1 || !colour2) return player.outputChatBox("The correct usage is: /colour [primary] [secondary]");
+
+    let veh = player.vehicle;
+    let primary = parseInt(colour1);
+    let secondary = parseInt(colour2);
+
+    veh.setColor(primary, secondary);
+
+    player.outputChatBox("<SRV> Colour changed!");
 });
