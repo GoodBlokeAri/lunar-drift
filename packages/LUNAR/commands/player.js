@@ -67,3 +67,16 @@ mp.events.addCommand('mods', (player) =>
      */
     player.outputChatBox("LIST OF CURRENT MODS: blze30 / cresta / evo6 / rx7cwest / s15mak / silvia");
 });
+
+mp.events.addCommand('colour', (player, colour1, colour2) =>
+{
+    if (!colour1 || !colour2) return player.outputChatBox("The correct usage is: /colour [primary] [secondary]");
+
+    let veh = player.vehicle;
+    let primary = parseInt(colour1);
+    let secondary = parseInt(colour2);
+
+    veh.setColor(primary, secondary);
+
+    player.outputChatBox("<SRV> Colour changed!");
+});
