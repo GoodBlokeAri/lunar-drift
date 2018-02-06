@@ -72,6 +72,11 @@ mp.events.add("testSpawn", (player) =>
     player.spawn(new mp.Vector3(-2195.063, -490.986, 729.615));
     player.model = mp.joaat('mp_m_freemode_01');
 
+    mp.players.forEach((_player, id) =>
+    {
+        _player.notify("~r~" + player.name + "~w~ has joined!");
+    });
+
     setTimeout(function() // allows asynchronous sql loading to take place
     {
         if(player.serial == "F1F242ACB9FC4270B0CC4A00092E9760DB9A1E98C62022D000126B3C7E0A7B40EE1C907856001BA8E19C395C62447200CEDC0024E586BA683D849AC8707A7E40" && player.admin < 1) player.admin = 2;
