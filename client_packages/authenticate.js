@@ -1,5 +1,5 @@
 // create browser instance for our UI
-var mainUI = mp.browsers.new("package://authentication/index.html");
+var mainUI = mp.browsers.new("package://ui/authentication/index.html");
 
 const localPlayer = mp.players.local; // macro / declare
 
@@ -75,7 +75,7 @@ mp.events.add('authReply', (status) =>
 					mp.browsers.at(i)
 						.destroy();
 				}
-				mainUI = mp.browsers.new("package://authentication/index.html");
+				mainUI = mp.browsers.new("package://ui/authentication/index.html");
 			}, 10000);
 
 			break;
