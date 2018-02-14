@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+        
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-extend.css">
+        <link rel="stylesheet" href="../assets/css/master_style.css">
+        <!-- <link rel="stylesheet" href="css/skins/_all-skins.css"> -->
+        <link rel="stylesheet" href="css/skins/skin-blue.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="../assets/font-awesome/css/font-awesome.css">
+
+        <script src="../assets/jquery-3.3.1.min.js"></script>
+        <script src="../assets/popper.min.js"></script>
+        <script src="../assets/bootstrap/js/bootstrap.js"></script>
+    </head>
+    <body>
+        <div class="vertical-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2 text-center">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h4 class="box-title title">
+                                   Admin Menu
+                                </h4>
+                                <button type="button" class="btn close" onclick="mp.trigger('closeadmin')">x</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="list-group" id="list-tab" role="tablist">
+                                        <a class="list-group-item list-group-item-action active" id="list-reports-list" data-toggle="list" href="#list-reports" role="tab" aria-controls="reports">
+                                            Reports <span class="badge badge-danger badge-pill">5</span></a>
+                                        <a class="list-group-item list-group-item-action" id="list-admin-list" data-toggle="list" href="#list-admin" role="tab" aria-controls="admin">Admin</a>
+                                        <a class="list-group-item list-group-item-action" id="list-manager-list" data-toggle="list" href="#list-manager" role="tab" aria-controls="manager">Manager</a>
+                                        <a class="list-group-item list-group-item-action" id="list-logs-list" data-toggle="list" href="#list-logs" role="tab" aria-controls="logs">Logs</a>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="list-reports" role="tabpanel" aria-labelledby="list-reports-list">
+                                            <table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">ID</th>
+                                                        <th scope="col">Player</th>
+                                                        <th scope="col">Reported Player</th>
+                                                        <th scope="col">Reason</th>
+                                                        <th scope="col">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>Mark</td>
+                                                        <td>Otto</td>
+                                                        <td>@mdo</td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Accept</a>
+                                                                  <a class="dropdown-item" href="#">Reject</a>
+                                                                  <a class="dropdown-item" href="#">Report Block</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>Jacob</td>
+                                                        <td>Thornton</td>
+                                                        <td>@fat</td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Accept</a>
+                                                                  <a class="dropdown-item" href="#">Reject</a>
+                                                                  <a class="dropdown-item" href="#">Report Block</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Accept</a>
+                                                                  <a class="dropdown-item" href="#">Reject</a>
+                                                                  <a class="dropdown-item" href="#">Report Block</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Accept</a>
+                                                                  <a class="dropdown-item" href="#">Reject</a>
+                                                                  <a class="dropdown-item" href="#">Report Block</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>Larry</td>
+                                                        <td>the Bird</td>
+                                                        <td>@twitter</td>
+                                                        <td>
+                                                            <div class="dropdown">
+                                                                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                  Action
+                                                                </button>
+                                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                                  <a class="dropdown-item" href="#">Accept</a>
+                                                                  <a class="dropdown-item" href="#">Reject</a>
+                                                                  <a class="dropdown-item" href="#">Report Block</a>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="tab-pane fade" id="list-admin" role="tabpanel" aria-labelledby="list-admin-list">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                  <button class="btn btn-success" type="button">Select</button>
+                                                </div>
+                                              </div>
+                                            <div class="input-group date">
+                                                <div class="input-group-addon">
+                                                  <i class="fa fa-calendar"></i>
+                                                </div>
+                                                <input type="text" class="form-control pull-right" id="datepicker">
+                                              </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="list-manager" role="tabpanel" aria-labelledby="list-manager-list">
+                                            Manager stuff here
+                                        </div>
+                                        <div class="tab-pane fade" id="list-logs" role="tabpanel" aria-labelledby="list-logs-list">
+                                            Logs stuff here
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="../assets/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+</html>
