@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-extend.css">
+        <link rel="stylesheet" href="../assets/css/master_style.css">
+        <link rel="stylesheet" href="css/skins/_all-skins.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="vertical-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 text-center">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h4 class="box-title title">
+                                    Player List
+                                </h4>
+                                <button type="button" class="btn close" onclick="">x</button>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Player</th>
+                                        <th scope="col">Ping</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Ping</td>
+                                        <td>54</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Pong</td>
+                                        <td>77</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Pang</td>
+                                        <td>999</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+            var slider = new Slider("#ex6");
+            slider.on("slide", function(sliderValue) {
+                document.getElementById("ex6SliderVal").textContent = mp.trigger("vRotation", sliderValue);
+                //mp.trigger("vRotation", sliderValue);
+            });
+        
+            function updateFirst(picker) {
+        
+                var red = Math.round(picker.rgb[0]);
+                var green = Math.round(picker.rgb[1]);
+                var blue = Math.round(picker.rgb[2]);
+        
+                mp.trigger("primaryColor", red, green, blue);
+        
+            }
+        
+            function updateSecond(picker) {
+        
+                var red = Math.round(picker.rgb[0]);
+                var green = Math.round(picker.rgb[1]);
+                var blue = Math.round(picker.rgb[2]);
+        
+                mp.trigger("secondaryColor", red, green, blue);
+        
+            }
+        </script>
+</html>
