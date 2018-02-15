@@ -11,3 +11,5 @@ client_packages/dlcpacks/
 server - Shortcut\.lnk
 
 client_packages/\.listcache
+
+packages/LUNAR/node_modules/
