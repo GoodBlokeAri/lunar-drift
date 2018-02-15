@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap-extend.css">
+        <link rel="stylesheet" href="../assets/css/master_style.css">
+        <link rel="stylesheet" href="css/skins/_all-skins.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <div class="vertical-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-4 text-center">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h4 class="box-title title">
+                                    Car Menu
+                                </h4>
+                                <button type="button" class="btn close" onclick="">x</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-md-offset-3 text-center margin-top-small">
+                                    <div class="form-group">
+                                        <input class="form-control" id="vehicle" placeholder="Vehicle name">
+                                        <input class="form-control margin-top-small" id="plate" placeholder="Number plate">
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center">
+                                            Primary Color  
+                                        </h3>
+                                    </div>
+                                    <input class="jscolor {onFineChange:'updateFirst(this)'}" value="000">
+                                    <div>
+                                        <h3 class="text-center">
+                                            Secondary Color 
+                                        </h3>
+                                    </div>
+                                    <input class="jscolor {onFineChange:'updateSecond(this)'}" value="fff">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 margin-top-medium">
+                                    <div class="form-group">
+                                        <button type="button" class="btn btn-primary" onclick="">Spawn</button>
+                                        <button type="button" class="btn btn-warning" onclick="">Fix Vehicle</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jscolor.js"></script>
+    </body>
+
+    <script>
+            var slider = new Slider("#ex6");
+            slider.on("slide", function(sliderValue) {
+                document.getElementById("ex6SliderVal").textContent = mp.trigger("vRotation", sliderValue);
+                //mp.trigger("vRotation", sliderValue);
+            });
+        
+            function updateFirst(picker) {
+        
+                var red = Math.round(picker.rgb[0]);
+                var green = Math.round(picker.rgb[1]);
+                var blue = Math.round(picker.rgb[2]);
+        
+                mp.trigger("primaryColor", red, green, blue);
+        
+            }
+        
+            function updateSecond(picker) {
+        
+                var red = Math.round(picker.rgb[0]);
+                var green = Math.round(picker.rgb[1]);
+                var blue = Math.round(picker.rgb[2]);
+        
+                mp.trigger("secondaryColor", red, green, blue);
+        
+            }
+        </script>
+</html>
