@@ -14,6 +14,8 @@
 						+>🐊
 						+>Elliot
 						+>Jim
+						+>Clyde
+						+>KrazyKazzyGuy
 
 
 		Credits:
